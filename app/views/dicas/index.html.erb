@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Dicas</title>
+</head>
+<body class="container">
+<%=
+  nav_bar brand:
+              "Dicas - Familink", brand_link: root_url
+  %>
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+    <tr class="active">
+        <th>Codigo</th>
+        <th>Titulo</th>
+        <th>Resumo</th>
+        <th>Texto</th>
+    </tr>
+    </thead>
+    <tbody>
+        <% @dicas_created_at.each do | dica | %>
+        <tr>
+          <td><%= dica.id %></td>
+          <td><%= dica.titulo %></td>
+          <td><%= dica.resumo %></td>
+          <td><%= dica.texto %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+</body>
+</html>
