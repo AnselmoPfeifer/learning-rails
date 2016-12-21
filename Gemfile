@@ -10,6 +10,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'twitter-bootstrap-rails'
 
+ruby '2.3.1'
+
 group :development, :test do
   gem 'byebug', platform: :mri
 end
